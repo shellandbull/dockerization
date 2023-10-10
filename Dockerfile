@@ -13,5 +13,5 @@ RUN apk add --update \
   librdkafka-dev
 RUN bundle install
 COPY . .
-CMD ["bundle", "exec", "rails", "server", "-b", "127.0.0.1"]
+CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
 
