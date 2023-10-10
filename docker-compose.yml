@@ -1,4 +1,4 @@
-version: '1.0'
+version: '1.1'
 services:
   # https://github.com/karafka/karafka/blob/master/docker-compose.yml
   kafka:
@@ -20,7 +20,7 @@ services:
       ALLOW_PLAINTEXT_LISTENER: 'yes'
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: 'true'
   db:
-    container_name: database
+    container_name: db
     image: postgres:13
     environment:
       POSTGRES_USER: user
@@ -30,9 +30,8 @@ services:
       - 5432:5432
     volumes:
       - /data/
-  # web:
-  # worker:
-  # web:
-  # worker:
-  # database:
-
+  web:
+    container_name: web
+    build: .
+    ports:
+      - 3000:3000
