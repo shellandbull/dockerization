@@ -20,3 +20,9 @@ The showcase:
 - [ ] Kafka/Jobs monitoring
 - [ ] Local/Database configuration
 - [ ] Remote/Database configuration
+
+# Usage
+
+```bash
+$ docker-compose up --build
+```
