@@ -53,3 +53,5 @@ end
 
 
 gem "karafka", ">= 2.2.0"
+
+gem "karafka-web", "~> 0.7.6"

@@ -6,6 +6,15 @@ RUN apk add --update \
   tzdata \
   git \
   bash \
+  bash-completion \
+  util-linux \
+  pciutils \
+  usbutils \
+  coreutils \
+  binutils \
+  findutils \
+  grep \
+  iproute2 \
   build-base \
   libxml2-dev \
   libxslt-dev \
@@ -15,6 +24,7 @@ RUN apk add --update \
   vim-doc \
   vim-tutor \
   curl
+
 RUN bundle install
 COPY . .
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]

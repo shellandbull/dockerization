@@ -102,6 +102,12 @@ GEM
       ffi (~> 1.15)
       mini_portile2 (~> 2.6)
       rake (> 12)
+    karafka-web (0.7.6)
+      erubi (~> 1.4)
+      karafka (>= 2.2.6, < 3.0.0)
+      karafka-core (>= 2.2.2, < 3.0.0)
+      roda (~> 3.68, >= 3.69)
+      tilt (~> 2.0)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -170,6 +176,8 @@ GEM
       psych (>= 4.0.0)
     reline (0.3.8)
       io-console (~> 0.5)
+    roda (3.74.0)
+      rack
     rspec-core (3.12.2)
       rspec-support (~> 3.12.0)
     rspec-expectations (3.12.3)
@@ -189,6 +197,7 @@ GEM
     rspec-support (3.12.1)
     stringio (3.0.8)
     thor (1.2.2)
+    tilt (2.3.0)
     timeout (0.4.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
@@ -208,6 +217,7 @@ DEPENDENCIES
   database_cleaner-active_record
   debug
   karafka (>= 2.2.0)
+  karafka-web (~> 0.7.6)
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.8)
